@@ -136,4 +136,228 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.border,
     marginHorizontal: 16,
   },
+
+  // Form (add screen)
+  sectionHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginBottom: 12,
+  },
+  sectionTitle: {
+    fontSize: 16,
+    fontWeight: "700",
+    color: COLORS.text,
+  },
+  toggleRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginBottom: 12,
+  },
+  toggleText: {
+    fontSize: 14,
+    color: COLORS.text,
+  },
+  fieldWrapper: {
+    marginBottom: 12,
+  },
+  fieldRow: {
+    flexDirection: "row",
+    gap: 12,
+  },
+  fieldCol: {
+    flex: 1,
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    borderRadius: 12,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    fontSize: 15,
+    color: COLORS.text,
+    backgroundColor: COLORS.background,
+  },
+  inputMultiline: {
+    height: 90,
+    textAlignVertical: "top",
+  },
+
+  // Pekerjaan
+  jobBox: {
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    borderRadius: 12,
+    padding: 12,
+    marginBottom: 12,
+  },
+  jobHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginBottom: 12,
+  },
+  jobTitle: {
+    fontSize: 15,
+    fontWeight: "600",
+    color: COLORS.text,
+  },
+  addJobButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 6,
+    paddingVertical: 12,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderStyle: "dashed",
+    borderColor: COLORS.primary,
+  },
+  addJobText: {
+    color: COLORS.primary,
+    fontWeight: "600",
+  },
+
+  // Pilih warna
+  colorRow: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 12,
+  },
+  colorSwatch: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  colorSwatchSelected: {
+    borderWidth: 3,
+    borderColor: COLORS.text,
+  },
+
+  // Tombol simpan
+  saveButton: {
+    backgroundColor: COLORS.primary,
+    borderRadius: 16,
+    paddingVertical: 16,
+    alignItems: "center",
+    marginBottom: 24,
+  },
+  saveText: {
+    color: COLORS.white,
+    fontSize: 16,
+    fontWeight: "700",
+  },
+    // Radio option
+  radioRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingVertical: 10,
+  },
+  radioText: {
+    fontSize: 15,
+    color: COLORS.text,
+  },
+  radioTextSelected: {
+    fontWeight: "700",
+  },
+
+  // Kartu statistik
+  statGrid: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 12,
+    marginBottom: 24,
+  },
+  statCard: {
+    flexGrow: 1,
+    flexBasis: "45%",
+    backgroundColor: COLORS.card,
+    borderRadius: 16,
+    padding: 16,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+  },
+  statCardFull: {
+    flexBasis: "100%",
+  },
+  statIconCircle: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 12,
+  },
+  statValue: {
+    fontSize: 20,
+    fontWeight: "700",
+    color: COLORS.text,
+  },
+    // Pengaturan
+  settingRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 12,
+  },
+  settingIconCircle: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  settingLabel: {
+    flex: 1,
+    fontSize: 15,
+    fontWeight: "600",
+    color: COLORS.text,
+  },
+  themeControl: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+  },
+    // Laporan
+  rangeRow: {
+    flexDirection: "row",
+    gap: 12,
+    marginBottom: 12,
+  },
+  rangeButton: {
+    flex: 1,
+    alignItems: "center",
+    paddingVertical: 14,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    backgroundColor: COLORS.background,
+  },
+  rangeButtonSelected: {
+    backgroundColor: COLORS.primary,
+    borderColor: COLORS.primary,
+  },
+  rangeText: {
+    fontSize: 14,
+    fontWeight: "600",
+    color: COLORS.text,
+  },
+  rangeTextSelected: {
+    color: COLORS.white,
+  },
+    // Checkbox
+  checkItem: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+    paddingVertical: 4,
+  },
+  checkText: {
+    fontSize: 14,
+    color: COLORS.text,
+  },
 });

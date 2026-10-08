@@ -9,3 +9,18 @@ export type MenuItem = {
   icon: IconName;
   color: string;
 };
+
+// Kartu statistik di layar Summary
+export type StatItem = {
+  id: string;
+  label: string;
+  value: string;
+  icon: IconName;
+  color: string;
+  fullWidth?: boolean;
+};
+
+// Report
+export type Report = {
+  
+}

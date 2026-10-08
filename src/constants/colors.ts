@@ -33,3 +33,29 @@ export const MENU_COLORS = {
   report: "#10B981",
   settings: "#64748B",
 } as const;
+
+// Pilihan warna untuk menandai tanggal di kalender
+export const LOG_COLORS = [
+  "#4F46E5",
+  "#EC4899",
+  "#F59E0B",
+  "#10B981",
+  "#0EA5E9",
+  "#8B5CF6",
+  "#EF4444",
+];
+
+// Warna kartu statistik
+export const STAT_COLORS = {
+  days: "#4F46E5",
+  hours: "#0EA5E9",
+  earning: "#10B981",
+  yearEarning: "#8B5CF6",
+  tax: "#F59E0B",
+} as const;
+
+// Warna ikon di layar Pengaturan
+export const SETTING_COLORS = {
+  user: "#0EA5E9",
+  theme: "#8B5CF6",
+} as const;

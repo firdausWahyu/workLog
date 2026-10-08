@@ -4,6 +4,7 @@ import { MENU_ITEMS } from "@/constants/menu";
 import { getMonthCells } from "@/functions/calendar";
 import { styles } from "@/styles/style";
 import { Ionicons } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 import { Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -15,6 +16,8 @@ export default function CalendarScreen() {
   const today = now.getDate();
 
   const cells = getMonthCells(year, month);
+
+  const router = useRouter();
 
   return (
     <SafeAreaView style={styles.container}>
@@ -66,25 +69,40 @@ export default function CalendarScreen() {
       </View>
 
       {/* Ringkasan */}
-      <View style={[styles.card, styles.summaryRow]}>
-        <View style={styles.summaryItem}>
-          <Text style={styles.label}>Total jam</Text>
-          <Text style={styles.summaryText}>00:00:00</Text>
-        </View>
+        <View style={[styles.card, styles.summaryRow]}>
+          <View style={styles.summaryItem}>
+            <Text style={styles.label}>Total jam</Text>
+            <Text style={styles.summaryText}>00:00:00</Text>
+          </View>
 
-        <View style={styles.summaryDivider} />
+          <View style={styles.summaryDivider} />
 
-        <View style={styles.summaryItem}>
-          <Text style={styles.label}>Total pendapatan</Text>
-          <Text style={[styles.summaryText, { color: COLORS.play }]}>Rp 0</Text>
+          <View style={styles.summaryItem}>
+            <Text style={styles.label}>Total pendapatan</Text>
+            <Text style={[styles.summaryText, { color: COLORS.play }]}>Rp 0</Text>
+          </View>
         </View>
-      </View>
 
       <View style={{ height: 10 }} />
 
+      {/* Menu Items*/}
       <View style={styles.menuRow}>
         {MENU_ITEMS.map((item) => (
-          <TouchableOpacity key={item.id} style={styles.menuCard}>
+          <TouchableOpacity 
+          key={item.id} 
+          style={styles.menuCard}
+          onPress={() => {
+            if (item.id === "summary") {
+              router.push("/summary");
+            }
+            if (item.id === "report") {
+               router.push("/report");
+            }
+            if (item.id === "settings") {
+              router.push("/settings");
+            }
+          }}
+          >
             <View
               style={[
                 styles.menuIconCircle,
@@ -98,7 +116,12 @@ export default function CalendarScreen() {
         ))}
       </View>
 
-      <TouchableOpacity style={styles.fab}>
+      <TouchableOpacity
+        style={styles.fab}
+        onPress={() => {
+          router.push("/add");
+        }}
+      >
         <Ionicons name="add" size={28} color={COLORS.white} />
       </TouchableOpacity>
     </SafeAreaView>
